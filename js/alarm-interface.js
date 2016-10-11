@@ -18,7 +18,7 @@ var currentTime;
 
   $("#alarmSet").submit(function (event) {
 
-    debugger;
+
     var input;
     var alarmTime;
     event.preventDefault();
@@ -31,9 +31,11 @@ var currentTime;
       console.log("test");
 
       if (alarmTime === time) {
-        console.log("WAKEUP");
+        alert("WAKEUP");
+        $("#snooze").show();
+        return;
       }
-    }, 1000);
+    }, 2000);
 
   });
 });
